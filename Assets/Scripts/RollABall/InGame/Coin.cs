@@ -6,6 +6,7 @@ public class Coin : MonoBehaviour
     private float disappearTime = 5f;
     private int bonusScoreValue = 20;
     private bool isBonus = true;
+    private int scoreValue = 10;
     void Start()
     {
         StartCoroutine(BonusTimeCoroutine());
@@ -25,11 +26,11 @@ public class Coin : MonoBehaviour
         {
             if (isBonus)
             {
-                ScoreManager.ScoReCount += bonusScoreValue;
+                Scoremanager.ScoreCount += bonusScoreValue;
             }
             else
             {
-                ScoreManager.ScoreCount += scoreValue;
+                Scoremanager.ScoreCount += scoreValue;
             }
             Destroy(gameObject);
         }
